@@ -1,0 +1,28 @@
+﻿
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tag Name:
+        </th>
+        <th>
+            Number of Blogs:
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in ViewBag.Tags) {
+    <tr>
+        <td>
+            @item.Key
+        </td>
+        
+        <td>
+            @item.Value
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<int>
+
+
+@{
+    ViewBag.Title = "YearSelector";
+}
+
+<h2>YearSelector</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Year
+        </th>
+        
+    </tr>
+
+    @foreach (var year in Model)
+    {
+        <tr>
+            <td>
+                @year
+            </td>
+          
+            <td>
+                @Html.ActionLink("Blogs of Year", "BlogsOfYear", new {year = year }) 
+            </td>
+        </tr>
+    }
+</table>
